@@ -28,3 +28,11 @@ jobs:
           go get github.com/xyproto/simpleredis
     - name: Build
       run: go build -v ./...
+
+    - name: build and push docker image to docker hub
+      uses: mr-smithers-excellent/docker-build-push@v6
+      with:
+        image: yes8055/guestbook-go
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}  
+        password: ${{ secrets.DOCKER_PASSWORD }}
