@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: guestbook
-        image: registry.k8s.io/guestbook:v3
+        image: yes8055/guestbook-go:latest
         ports:
         - name: http-server
           containerPort: 3000
